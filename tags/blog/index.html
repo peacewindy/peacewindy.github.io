@@ -11,8 +11,8 @@
   
   <title>
     
-      test 
-      
+      Tag 
+       : blog
       
       |
     
@@ -96,97 +96,30 @@
 
 
       <div class="flex-container">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
-};
-</script>
-
-
-
-  
-
-  
-
-  
-
-  
-  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
-  <div class="container post-details" id="post-details">
-    <div class="post-content">
-      <div class="post-title">test</div>
-      <div class="post-attach">
-        <span class="post-pubtime">
-          <i class="iconfont icon-updatetime" title="Update time"></i>
-          2021-05-15 10:23:35
-        </span>
-        
-      </div>
-      <div class="markdown-body">
-        <p>基础知识<br>    变成语言：java python c<br>    基本语法<br>    基本网络知识：tcp/ip http/https</p>
-<hr>
-<p>工具方面<br>    操作系统：linux (CentOS\Ubuntu\Fe..)<br>    代码管理：svn/git<br>    持续集成(CI/CD):jenkins<br>    java的项目管理工具：maven/gradle </p>
-<hr>
-<p>框架方面<br>    ssh (spring+structs+hibernate)(已过时)<br>    ssm:spring +springmvc+mybatis(流行)<br>    spring boot</p>
-<hr>
-<p>各种中间件<br>    MQ 消息队列<br>    RPC 通讯框架 gRPC thrift dubbo springcloud<br>    elasticsearch 收索引擎 数据库</p>
-<hr>
-<p>数据库<br>    SQL：mysql/postgre sql<br>    Nosql:redis memcached mongodb elasticsearch</p>
-<hr>
-<p>架构方面<br>    分布式/微服务架构<br>    spring cloud<br>    dubbo<br>    rpc通信</p>
-<hr>
-<p>虚拟化/容器化的技术<br>    Docker 容器化<br>    k8s kubernetes</p>
-<hr>
-<p>关注源码/性能<br>    jdk源码以及部分设计思想<br>    Spring 源码<br>    JVM细节与排错<br>    高并发/高可用徒弟：师傅这就是绝世武功秘籍吗？<br>师傅：不，这只是绝世武功的目录！</p>
-
-      </div>
-      
-        <div class="prev-or-next">
-          <div class="post-foot-next">
-            
-              <a href="/2021/05/15/My-New-Post/" target="_self">
-                <i class="iconfont icon-chevronleft"></i>
-                <span>Prev</span>
-              </a>
-            
-          </div>
-          <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime" title="Update time"></i>
-              2021-05-15 10:23:35
-            </span>
-            
-          </div>
-          <div class="post-foot-prev">
-            
-          </div>
-        </div>
-      
-    </div>
-    
-
-    
-      <div class="comments-container">
-        
-
-
-
-
-
-      </div>
-    
+<div class="container tag-details">
+  <div class="content-title">
+    <h2>
+      <span>blog</span>
+    </h2>
   </div>
-
+  
+    <div class="post-list">
+      <div class="post-item" title="VM+CentOS+MySql">
+        <span class="time-m-d">2021-05-12</span>
+        <a href="/2021/05/12/1.VM+CentOS+MySql/">
+          <span>VM+CentOS+MySql</span>
+        </a>
+      </div>
+    </div>
+  
+  <nav class="post-navigation">
+    
+    <span class="page-num">1 / 1</span>
+    
+  </nav>
+</div>
 
         <div class="footer">
   <div class="social">
