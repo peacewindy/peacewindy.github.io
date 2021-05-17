@@ -11,8 +11,8 @@
   
   <title>
     
-      Tag 
-       : tag
+      Friend 
+      
       
       |
     
@@ -58,7 +58,7 @@
     <a href="/">
       <!-- 头像取消懒加载，添加no-lazy -->
       
-        <img src="/images/avatar.png" alt="">
+        <img no-lazy src="/images/avatar.png" alt="">
       
     </a>
     <div class="nickname"><a href="/">Oranges</a></div>
@@ -96,30 +96,62 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>tag</span>
-    </h2>
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+  <!-- 朋友页 url形式：https://yoursite/friends/ -->
+  <div class="container friend-index">
+    <div class="friend-list">
+      
+        <div class="friend-list-item">
+          <span class="nickname">@ Zcheng</span>
+          <a href="https://zcheng.site/" target="_blank">
+            <span class="site-path">https://zcheng.site/</span>
+          </a>
+          <p class="card-meta">
+            
+          </p>
+        </div>
+      
+        <div class="friend-list-item">
+          <span class="nickname">@ Hexo</span>
+          <a href="https://hexo.io/" target="_blank">
+            <span class="site-path">https://hexo.io/</span>
+          </a>
+          <p class="card-meta">
+            
+          </p>
+        </div>
+      
+    </div>
+    <div class="markdown-body">
+      <p>@ Zcheng <a href="https://">https://zcheng.site/</a><br>@ Hexo <a href="https://">https://hexo.io/</a><br>@ CodeSheep <a href="https://">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+
+    </div>
   </div>
   
-    <div class="post-list">
-      <div class="post-item" title="VM+CentOS+MySql">
-        <span class="time-m-d">2021-05-17</span>
-        <a href="/2021/05/17/VM-CentOS-MySql/">
-          <span>VM+CentOS+MySql</span>
-        </a>
-      </div>
-    </div>
+
   
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
+
+  
 
         <div class="footer">
   <div class="social">
@@ -391,5 +423,11 @@
 
 
     </div>
-  </body>
+  <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
