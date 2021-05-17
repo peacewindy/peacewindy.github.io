@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-05-15T02:24:44.629Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://example.com/2021/05/15/test/"/>
+    <id>http://example.com/2021/05/15/test/</id>
+    <published>2021-05-15T02:23:35.000Z</published>
+    <updated>2021-05-15T02:24:44.629Z</updated>
+    
+    <content type="html"><![CDATA[<p>基础知识<br>    变成语言：java python c<br>    基本语法<br>    基本网络知识：tcp/ip http/https</p><hr><p>工具方面<br>    操作系统：linux (CentOS\Ubuntu\Fe..)<br>    代码管理：svn/git<br>    持续集成(CI/CD):jenkins<br>    java的项目管理工具：maven/gradle </p><hr><p>框架方面<br>    ssh (spring+structs+hibernate)(已过时)<br>    ssm:spring +springmvc+mybatis(流行)<br>    spring boot</p><hr><p>各种中间件<br>    MQ 消息队列<br>    RPC 通讯框架 gRPC thrift dubbo springcloud<br>    elasticsearch 收索引擎 数据库</p><hr><p>数据库<br>    SQL：mysql/postgre sql<br>    Nosql:redis memcached mongodb elasticsearch</p><hr><p>架构方面<br>    分布式/微服务架构<br>    spring cloud<br>    dubbo<br>    rpc通信</p><hr><p>虚拟化/容器化的技术<br>    Docker 容器化<br>    k8s kubernetes</p><hr><p>关注源码/性能<br>    jdk源码以及部分设计思想<br>    Spring 源码<br>    JVM细节与排错<br>    高并发/高可用徒弟：师傅这就是绝世武功秘籍吗？<br>师傅：不，这只是绝世武功的目录！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;基础知识&lt;br&gt;    变成语言：java python c&lt;br&gt;    基本语法&lt;br&gt;    基本网络知识：tcp/ip http/https&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;工具方面&lt;br&gt;    操作系统：linux (CentOS\Ubuntu\Fe..)&lt;br&gt;   </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我是傻逼</title>
+    <link href="http://example.com/2021/05/15/My-New-Post/"/>
+    <id>http://example.com/2021/05/15/My-New-Post/</id>
+    <published>2021-05-15T02:06:56.000Z</published>
+    <updated>2021-05-15T02:09:15.361Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="nt-BUG"><a href="#nt-BUG" class="headerlink" title="nt BUG"></a>nt BUG</h3><p>之前有一个Dao接口忘了写@Autowired，一直空指针，弄了一下午``</p><br/><p>虚拟机里网关149写成148了，虚拟机上不了网了<br>虚拟机开了防火墙，本机好像就访问不了</p><p>虚拟机关了防火墙firewalld但是忘了关iptables，主机访问不了</p><hr><h3 id="JDK版本bug"><a href="#JDK版本bug" class="headerlink" title="JDK版本bug"></a>JDK版本bug</h3><p>ByteBuffer.flip()<br>这个函数在JDK1.8之后变了，如果编译的时候不用运行是不会报错的，这也导致不同JDK11的本地编译后，JDK8的服务器运行失败。<br>后来我切换到8之后好像还是不行。<br>在代码中添加了强制转换就OK了，((Buffer)bb).flip ();</p><hr><h3 id="mathjs"><a href="#mathjs" class="headerlink" title="mathjs"></a>mathjs</h3><p>今天cnpm不好用了淦<br><a href="mailto:&#102;&#115;&#101;&#118;&#101;&#x6e;&#116;&#x73;&#x40;&#49;&#x2e;&#50;&#46;&#57;">&#102;&#115;&#101;&#118;&#101;&#x6e;&#116;&#x73;&#x40;&#49;&#x2e;&#50;&#46;&#57;</a>是macOS的<br>mathjs发布后失效导致一页无法加载，用8.1.0版本就好了，淦</p><hr><h3 id="mysql大小写问题"><a href="#mysql大小写问题" class="headerlink" title="mysql大小写问题"></a>mysql大小写问题</h3><p>mysql在linux版本默认区分大小写，需要在my.cnf</p><p>[mysqld]下追加</p><p>lower_case_table_names</p><p>重启mysql后即可</p><hr><h3 id="Mysql版本不兼容"><a href="#Mysql版本不兼容" class="headerlink" title="Mysql版本不兼容"></a>Mysql版本不兼容</h3><p>虚拟机mysql5.7运行jar包mysql8.0报错</p><p>com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure</p><p>Last packet sent to the server was 0 ms ago</p><p>改了一天的bug,原因众多，我的原因是不兼容</p><p>1 修改my.ini bind-address = 127.0.0.1 为 bind-address = 0.0.0.0   </p><p>2  检查防火墙是否有开放3306端口</p><p>3    wait_timeout=31536000<br>    interactive_timeout=31536000 </p><p>4  在后端打包时数据库url增加    &amp;useSSL=false  ，保证其兼容性</p><p>设置4后才运行成功的，来源 <a href="https://www.codeprj.com/blog/b7e06a1.html">https://www.codeprj.com/blog/b7e06a1.html</a></p><hr><h3 id="node环境变量"><a href="#node环境变量" class="headerlink" title="node环境变量"></a>node环境变量</h3><p>想用hexo，node10.13太低了，升级后node命令无了，调试半天只能重装</p><p>用户变量中设置 NODE_PATH：C:\Program Files\nodejs<br>系统变量中在path中加入：C:\Program Files\nodejs\</p><p>重启cmd 或 webstorm</p><p>发现node 和 node -sass不匹配</p><p>最后又降回的node10，tmd</p><br/><hr><h3 id="yum安装出现No-package-nodejs-available解决办法"><a href="#yum安装出现No-package-nodejs-available解决办法" class="headerlink" title="yum安装出现No package nodejs available解决办法"></a>yum安装出现No package nodejs available解决办法</h3><p>更新仓库</p><p>yum -y update</p><p>查找包名</p><p>yum search XXX</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;nt-BUG&quot;&gt;&lt;a href=&quot;#nt-BUG&quot; class=&quot;headerlink&quot; title=&quot;nt BUG&quot;&gt;&lt;/a&gt;nt BUG&lt;/h3&gt;&lt;p&gt;之前有一个Dao接口忘了写@Autowired，一直空指针，弄了一下午``&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;p&gt;虚拟</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2021/05/14/hello-world/"/>
+    <id>http://example.com/2021/05/14/hello-world/</id>
+    <published>2021-05-14T13:49:29.356Z</published>
+    <updated>2021-05-14T13:49:29.356Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
